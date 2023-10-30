@@ -1,10 +1,7 @@
 package ma.enset.walletservice.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,9 +14,10 @@ import java.util.UUID;
 public class Wallet {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private double balance;
+    private Double balance;
     private Date creationDate;
     private String currency;
+
 
 
 }
